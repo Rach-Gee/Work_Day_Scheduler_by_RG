@@ -66,16 +66,16 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: gray;
   color: #000000;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: rgb(255, 85, 85) ;
   color: #000000;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: lightgreen;
   color: #000000;
 }

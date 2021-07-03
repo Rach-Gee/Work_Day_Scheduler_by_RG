@@ -13,25 +13,19 @@ $(".saveBtn").on("click", function (event) {
     var userInfo = $(this).prev().val();
     console.log(userInfo)
     localStorage.setItem($(this).prev().attr("id"), userInfo)
-
 });
 
 // change colors of schedule depending on local time for planner
-   $("input").each(function () {
-        var selectedInput = parseInt($(this).attr("id"));
 
-        if (selectedInput > localTime) {
-            $(this).addClass("future")
-
-        } else if (selectedInput == localTime) {
-
-            $(this).addClass("present")
-
-        }
-        else {
-            $(this).addClass("past")
-
-        };
-
-        $("#" + selectedInput).val(localStorage.getItem(selectedInput))
-    });
+$("input").each(function () {
+    var time = parseInt($(this).attr("id"));
+    if (time > localTime) {
+        $(this).addClass("future")
+    } else if (time == localTime) {
+        $(this).addClass("present")
+    }
+    else {
+        $(this).addClass("past")
+    };
+    $("#" + time).val(localStorage.getItem(time))
+});
